@@ -1,0 +1,24 @@
+/*
+Escriba el código CSS a usar sobre el HTML del punto 13, para que la tabla del punto 2 se visualice con las siguientes características (modifique el HTML original para conseguir el resultado deseado). Entregue el archivo 
+Fila de títulos en fondo color azul, texto en color blanco, centrados.
+Todas las celdas deben tener un margen de 5 pixeles y borde alrededor en color negro.
+Cada celda de datos debe tener textos en Arial y tamaño de 14 pixeles.
+*/
+.bg-gris{
+    background-color: #2a2aad !important;
+    text-align: center;
+    color: white;
+}
+
+table{
+    background-color: black;
+}
+
+th,
+td {
+    border: black 0.1px solid;
+    background-color: white;
+    margin: 5px;
+    font-family:Arial;
+    font-size: 14px;
+}

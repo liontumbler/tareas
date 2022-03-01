@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Pregunta14.css"/>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th class="bg-gris">Ciudad</th>
+            <th class="bg-gris">Indice_población</th>
+            <th class="bg-gris">Porcentaje_desempleo</th>
+        </tr>
+        <tr>
+            <td><i>Bogotá</i></td>
+            <td class="indice">80</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><i>Cali</i></td>
+            <td class="indice">30</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td><i>Medellín</i></td>
+            <td class="indice">72</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><i>Cota</i></td>
+            <td class="indice">2</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <button onclick="promedio(document.getElementsByClassName('indice'))">Promedio</button>
+
+    <hr>
+
+    <h2>Consumiendo WS</h2>
+
+    <div id="contenido"></div>
+
+    <script>
+
+        /*
+        30.Para el ejemplo anterior construya un programa en Javascript que realice el consumo del WebService y muestre el resultado obtenido
+
+        Datos de prueba: 
+        ipAddress => 95.23.148.203
+        licenseKey => 0
+        */
+        function promedio(myArray) {
+            var i = 0, sum = 0, ArrayLen = myArray.length;
+            while (i < ArrayLen) {
+                sum = sum + parseInt(myArray[i++].innerText);
+            }
+            alert('El indice las lluvias acumulado es ' + (sum / ArrayLen));
+        }
+
+        //esto se puede hacer en un archivo aparte, pero por simplicidad se hizo en el mismo 
+        //archivo para que pueda mirar toda la logica en un solo lugar
+
+        //parametros enviados por POST
+        const data = new FormData();
+        data.append("ipAddress", "95.23.148.203");
+        data.append("licenseKey", "0");
+
+        fetch('ws.php', {
+            method: 'POST',
+            body: data
+        }).then((respuesta) => {
+            console.log(respuesta);
+
+            if(respuesta.ok) 
+                return respuesta.text()
+            else 
+                throw "Error en la llamada Ajax";
+            
+        }).then((respuesta) => {
+            return JSON.parse(respuesta);
+        }).then(function(texto) {
+            console.log(texto);
+            let cadena = '';
+            for(text in texto) {
+                let subcadena = "<o>" + text + " = " + (texto[text] ? texto[text] : "null") + "</o><br>"
+                cadena = cadena + subcadena;
+            }
+
+            var conte = document.getElementById('contenido');
+            //console.log(cadena);
+            conte.innerHTML = cadena;
+        });
+    </script>
+
+</body>
+
+</html>
