@@ -1,34 +1,34 @@
 <?php
 /*
- * 1.Escriba una función PHP que procese el contenido del archivo y genere una salida en pantalla. El objetivo de este punto es analizar la capacidad de crear un algoritmo. 
-    El archivo de texto “entrada.txt” y la fecha de captura se reciben como parámetros de la función y usted debe proveer los dos insumos.
-    
-    La función debe realizar una salida en pantalla como se ve en ejemplo Array. “USTED debe analizar el archivo de entrada, los registros, y generar un tipo de salida como esta en el ejemplo SALIDA EN PANTALLA”: Entregue un archivo “pregunta1.php” cree el archivo de entrada “entrada.txt” de tal forma que la salida de la función en la pantalla sea como ve en el ejemplo: 
-    Tener en cuenta que otra persona puede editar el archivo de entrada y adicionar mas ciudades con mas detalles, y la salida debe generar la misma estructura.
+Escriba una función PHP que procese el contenido del archivo y genere una salida en pantalla. El objetivo de este punto es analizar la capacidad de crear un algoritmo. 
+El archivo de texto “entrada.txt” y la fecha de captura se reciben como parámetros de la función y usted debe proveer los dos insumos.
 
-    SALIDA EN PANTALLA:
+La función debe realizar una salida en pantalla como se ve en ejemplo Array. “USTED debe analizar el archivo de entrada, los registros, y generar un tipo de salida como esta en el ejemplo SALIDA EN PANTALLA”: Entregue un archivo “pregunta1.php” cree el archivo de entrada “entrada.txt” de tal forma que la salida de la función en la pantalla sea como ve en el ejemplo: 
+Tener en cuenta que otra persona puede editar el archivo de entrada y adicionar mas ciudades con mas detalles, y la salida debe generar la misma estructura.
 
-    Array
-    (
-        [9] => Hora del día
-    (
-                [bogota] => 65
-                [cali] => 20
-            )
-        [14] => Hora del día
-    (
-                [bogota] => 15
-                [cali] => 10
-                [medellin] => 5
+SALIDA EN PANTALLA:
 
-            )
-        ...
-        [7] => Hora del día
-    (
-                [ibague] =>3
-                [mocoa] => 147
-            )
-    )
+Array
+(
+    [9] => Hora del día
+(
+            [bogota] => 65
+            [cali] => 20
+        )
+    [14] => Hora del día
+(
+            [bogota] => 15
+            [cali] => 10
+            [medellin] => 5
+
+        )
+    ...
+    [7] => Hora del día
+(
+            [ibague] =>3
+            [mocoa] => 147
+        )
+)
  */
 
 class LeerArchivo

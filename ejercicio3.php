@@ -1,6 +1,6 @@
 <?php
 /*
-10.Genere el código en php para imprimir toda la matriz, entregue un archivo con el nombre “pregunta12.php”
+Genere el código en php para imprimir toda la matriz, entregue un archivo con el nombre “pregunta12.php”
 
 <?php
 

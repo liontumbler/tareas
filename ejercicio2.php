@@ -1,6 +1,6 @@
 <?php
 /*
-6.Escriba el código necesario para inicializar el siguiente arreglo de datos: entregue un archivo “pregunta7.php” QUE AL EJECUTARLO MUESTRE LA SIGUIENTE IMPRESIÓN 
+Escriba el código necesario para inicializar el siguiente arreglo de datos: entregue un archivo “pregunta7.php” QUE AL EJECUTARLO MUESTRE LA SIGUIENTE IMPRESIÓN 
 
 $arreglo = Array
 (
