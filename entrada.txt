@@ -1,0 +1,8 @@
+CIUDAD, HORA, INDICE
+Bogota, 09, 65
+Cali, 09, 20
+Bogota, 14, 15
+Medellin, 14, 5
+Cali, 14, 10
+Medellin, 15, 67
+Cota, 16, 2
